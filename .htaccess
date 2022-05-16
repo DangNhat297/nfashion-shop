@@ -1,0 +1,32 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+ErrorDocument 404 /404.php
+RewriteRule ^trang-chu.html$ index.php [L]
+RewriteRule ^dang-nhap/|dang-nhap$ login.php [L]
+RewriteRule ^dang-ky/|dang-ky$ register.php [L]
+RewriteRule ^dang-xuat/|dang-xuat$ logout.php [L]
+RewriteRule ^gio-hang/|gio-hang$ cart.php [L]
+RewriteRule ^thanh-toan/|thanh-toan$ checkout.php [L]
+RewriteRule ^lien-he/|lien-he$ contact.php [L]
+RewriteRule ^don-hang/|don-hang$ order.php [L]
+RewriteRule ^gioi-thieu/|gioi-thieu$ about.php [L]
+RewriteRule ^tai-khoan/|tai-khoan$ profile.php [L]
+RewriteRule ^san-pham-dac-biet/|san-pham-dac-biet$ listproduct.php?type=special [L]
+RewriteRule ^san-pham-khuyen-mai/|san-pham-khuyen-mai$ listproduct.php?type=sale [L]
+RewriteRule ^doi-mat-khau/|doi-mat-khau$ change-password.php [L]
+RewriteRule ^kich-hoat/|kich-hoat$ active.php [L]
+RewriteRule ^quen-mat-khau/|quen-mat-khau$ forgotpassword.php [L]
+RewriteRule ^khoi-phuc-mat-khau/|khoi-phuc-mat-khau$ recovery-password.php [L]
+RewriteRule ^danh-sach-san-pham/|danh-sach-san-pham$ listproduct.php [L]
+RewriteRule ^chi-tiet-don-hang/([0-9]*)$ order-detail.php?order=$1 [L]
+RewriteRule ^san-pham/([a-zA-Z0-9-_]*).([0-9]*).html$ product.php?id=$2 [L]
+
+# disable directory browsing
+
+
+# prevent folder listing
+
+IndexIgnore *
+
